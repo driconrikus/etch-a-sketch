@@ -1,0 +1,129 @@
+body {
+    border: 0px;
+    background-image: linear-gradient(to right top, #0e141f, #131a26, #18202d, #1c2634, #212c3b, #293c4f, #2f4e64, #346079, #37849e, #38abc0, #43d2dc, #5ffbf1);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    font-size: 32px;
+    text-align: center;
+    color: #ffffff;
+}
+
+h2 {
+    font-size: 14px;
+    text-align: center;
+    color: #ffffff;
+}
+
+.container {
+    margin: auto;
+}
+.title {
+    color: #ffffff;
+    text-align: center;
+    height: 50px;
+    width: 350px;
+    background-color: #485a6ca9;
+    position: relative;
+    border-radius: 5px;
+    box-shadow: 0px 0px 1px 0px;
+    margin: auto;
+}
+
+.menu {
+    color: #ffffff;
+    text-align: center;
+    height: 350px;
+    width: 350px;
+    position: relative;
+    background-color: #485a6ca9;
+    border-radius: 5px;
+    margin: auto;
+    box-shadow: 0px 0px 1px 0px;
+}
+
+  #range{
+    margin-top: 50px;
+    -webkit-appearance: none;
+    appearance: none;
+    width: 150px;
+    height: 25px;
+    background: #273445;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s; 
+    transition: opacity .2s;
+  }
+
+
+
+  #range::-webkit-slider-thumb {
+    -webkit-appearance: none; 
+    appearance: none;
+    width: 25px; 
+    height: 25px; 
+    background: #667885;
+    cursor: pointer; 
+  }
+  
+
+#xrange { 
+    color: #ffffff;
+    font-size: 48px;
+    background: transparent;
+    border: none;
+    width: 64px;
+}
+
+#newgrid {
+    margin-right: 5px;
+    margin-top: 35px;
+    width: 72px;
+    height: 32px;
+    background: transparent;
+    color: #ffffff;
+    border: none;
+    outline: dashed;
+    
+}
+
+#rainbow {
+    margin-left: 5px;
+    margin-top: 35px;
+    width: 72px;
+    height: 32px;
+    background: transparent;
+    color: #ffffff;
+    border: none;
+    outline: dashed;
+}
+
+.grid {
+    grid-area: auto;
+    border-style: solid;
+    border-color: #000000;
+    border-width: 3px;
+    background-color: #273445b6;
+    height: 600px;
+    width: 600px;
+    position: relative;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    grid-column-gap: 2px;
+    grid-row-gap: 2px;
+    border-radius: 5px;
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0px 0px 1px 0px;
+}
+
+.grid div {
+    border-width: 1px;
+    border-color: #000000;
+    background-color: #ffffff;
+    height: auto;
+    width: auto;
+}
