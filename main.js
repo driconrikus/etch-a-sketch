@@ -5,7 +5,7 @@ out.value = gridSlider.value;
 let btn = document.querySelector('#newgrid');
 let rainbowBtn = document.querySelector('#rainbow');
 btn.addEventListener('click', ask);
-rainbowBtn.addEventListener('click', rainbowColors);
+rainbowBtn.addEventListener('click', askC);
 let colorCnt = 0;
 
 // Slider input for changing the grid size.
@@ -31,6 +31,16 @@ function ask(){
     }
 }
 
+function askC(){
+    let ask = confirm(`Create new grid with ${out.value}x${out.value} squares with color mode?`);
+    if (ask == true){
+        reset();
+        createGridColor(out.value);
+    } else {
+        alert('Canceled.');
+    }
+}
+
 // This function creates the grid as well as filling it with black on mouseover.
 function createGrid(size){
     gridSquare.style.gridTemplateColumns = `repeat(${size}, 1fr)`;
@@ -44,14 +54,28 @@ function createGrid(size){
     }
 }
 
+
 // Fills the grid with black. 
 function fillBlack(){
     this.style.backgroundColor = "#000000";
     colorCnt += 0.10;
   }
 
-
 // Fills the grid with rainbow colors!
-function rainbowColors(){
-      alert('Coming soon!');
+function createGridColor(size){
+    gridSquare.style.gridTemplateColumns = `repeat(${size}, 1fr)`;
+    gridSquare.style.gridTemplateRows = `repeat(${size}, 1fr)`;
+    for(i=0; i<size*size; i++){
+        const div = document.createElement('div');
+        div.addEventListener('mouseover', fillColor);
+        div.classList.add('square');
+        gridSquare.appendChild(div);
+        colorCnt = 0;
+    }
+}
+
+function fillColor(){
+    let rainbow = Math.floor(Math.random()*16777215).toString(16);
+    this.style.backgroundColor = `#${rainbow}`;
+    colorCnt += 0.10;
   }
