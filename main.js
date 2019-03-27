@@ -23,9 +23,11 @@ function reset(){
 // Grid creation dialog.
 function ask(){
     let ask = confirm(`Create new grid with ${out.value}x${out.value} squares?`);
-    reset();
-    if (ask){
+    if (ask == true){
+        reset();
         createGrid(out.value);
+    } else {
+        alert('Canceled.');
     }
 }
 
@@ -47,6 +49,7 @@ function fillBlack(){
     this.style.backgroundColor = "#000000";
     colorCnt += 0.10;
   }
+
 
 // Fills the grid with rainbow colors!
 function rainbowColors(){
