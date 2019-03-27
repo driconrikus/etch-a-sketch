@@ -31,6 +31,7 @@ function ask(){
     }
 }
 
+// Grid creation dialog for color mode.
 function askC(){
     let ask = confirm(`Create new grid with ${out.value}x${out.value} squares with color mode?`);
     if (ask == true){
@@ -55,13 +56,12 @@ function createGrid(size){
 }
 
 
-// Fills the grid with black. 
 function fillBlack(){
     this.style.backgroundColor = "#000000";
     colorCnt += 0.10;
   }
 
-// Fills the grid with rainbow colors!
+// Creates a new grid with color mode enabled.
 function createGridColor(size){
     gridSquare.style.gridTemplateColumns = `repeat(${size}, 1fr)`;
     gridSquare.style.gridTemplateRows = `repeat(${size}, 1fr)`;
