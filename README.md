@@ -2,4 +2,4 @@
  
  Draw something, be creative!
  
- You can find it live [here](https://drikonricus.github.io/etch-a-sketch/). 
+ You can try it live [here](https://driconrikus.github.io/etch-a-sketch/). 
